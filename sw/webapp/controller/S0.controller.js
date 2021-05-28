@@ -19,6 +19,10 @@ sap.ui.define([
 			onChange: function (oEvent) {
 				this.sValueSearchField = oEvent.getSource().getValue();
 				this.oModel.loadData(this.urlApi + this.sValueSearchField + "/");
+			},
+
+			onDocumentation: function(){
+				
 			}
 
 		});
