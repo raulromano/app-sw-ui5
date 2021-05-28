@@ -11,9 +11,9 @@
 					<SearchField id="idSearch" liveChange="onChange" search="onChange"/>
 					<form:SimpleForm >
 						<Label text="Person name"/>
-						<Input value="{/name}"/>
+						<Input value="{/name}" width="50%"/>
 						<Label text="Gender name"/>
-						<Input value="{/gender}"/>
+						<Input value="{/gender}" width="50%"/>
 					</form:SimpleForm>
 						<List items="{/films}">
 							<items>
