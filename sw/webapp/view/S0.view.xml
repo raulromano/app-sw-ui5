@@ -1,4 +1,4 @@
-<mvc:View
+<mvc:View xmlns:form="sap.ui.layout.form"
     controllerName="sw.controller.S0"
     xmlns:mvc="sap.ui.core.mvc"
     displayBlock="true"
@@ -8,7 +8,27 @@
 		<App id="app">
 			<pages>
 				<Page id="page" title="{i18n>title}">
-					<content />
+					<SearchField id="idSearch" liveChange="onChange" search="onChange"/>
+					<form:SimpleForm >
+						<Label text="Person name"/>
+						<Input value="{/name}"/>
+						<Label text="Gender name"/>
+						<Input value="{/gender}"/>
+					</form:SimpleForm>
+						<List items="{/films}">
+							<items>
+							    <CustomListItem>
+									<Link href="{}" text="Films" target="_blank"/>
+								</CustomListItem>
+							</items>
+						</List>
+					<footer>
+						<Bar >
+							<contentMiddle>
+								<Button text="Documentation" press="onDocumentation"/>
+							</contentMiddle>
+						</Bar>
+					</footer>
 				</Page>
 			</pages>
 		</App>
