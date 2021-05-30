@@ -8,14 +8,16 @@
 		<App id="app">
 			<pages>
 				<Page id="page" title="{i18n>title}">
-					<SearchField value="{control>/searchField}" liveChange="onChange" search="onChange"/>
+					<StepInput value="{control>/searchField}" change="onChange" visible="{= ${device>/system/phone} ? false : true}"/>
+					<SearchField value="{control>/searchField}" liveChange="onChange" search="onChange" visible="{device>/system/phone}"/>
 					<form:SimpleForm >
+					<!-- busyIndicatorDelay="0" busy="{control>/busySimpleForm}"> -->
 						<Label text="Person name"/>
 						<Input value="{/name}" width="50%"/>
 						<Label text="Gender name"/>
 						<Input value="{/gender}" width="50%"/>
 					</form:SimpleForm>
-						<List items="{/films}">
+						<List items="{/films}" busyIndicatorDelay="0" busy="{control>/busySimpleForm}">
 							<items>
 							    <CustomListItem>
 									<Link href="{}" text="Films" target="_blank"/>

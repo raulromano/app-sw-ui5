@@ -28,7 +28,6 @@
       "phone": true
     }
   },
-
   "sap.ui5": {
     "flexEnabled": false,
     "rootView": {
@@ -55,6 +54,11 @@
         "settings": {
           "bundleName": "sw.i18n.i18n"
         }
+      },
+      "control": {
+        "type": "sap.ui.model.json.JSONModel",
+        "settings": {},
+        "preload": false
       }
     },
     "resources": {
@@ -78,7 +82,9 @@
         {
           "name": "RouteS0",
           "pattern": "RouteS0",
-          "target": ["TargetS0"]
+          "target": [
+            "TargetS0"
+          ]
         }
       ],
       "targets": {
