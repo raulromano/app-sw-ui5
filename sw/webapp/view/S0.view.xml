@@ -24,9 +24,6 @@
 						</List>
 					<footer>
 						<Bar >
-							<contentLeft>
-								<Button text="Details"/>
-							</contentLeft>
 							<contentMiddle>
 								<Button text="Documentation" press="onDocumentation"/>
 							</contentMiddle>
